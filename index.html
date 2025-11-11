@@ -35,7 +35,7 @@
             border-radius: 12px;
             overflow: hidden;
             display: flex;
-            min-height: 1122px; /* A4 proportions */
+            /* removed fixed min-height so layout can adapt to small screens */
         }
 
         /* Left Column Styling */
@@ -489,6 +489,52 @@
                 right: 10px;
             }
         }
+
+        /* Responsive adjustments for the main CV layout */
+        @media (max-width: 1100px) {
+            .cv-container {
+                margin: 20px;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .cv-container {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .left-column, .right-column {
+                width: 100%;
+                padding: 24px;
+            }
+
+            .left-column {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .profile-pic-placeholder {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 18px;
+            }
+
+            .cv-container .right-column {
+                padding-top: 18px;
+            }
+
+            h1 { font-size: 22px; }
+            .title { font-size: 15px; }
+        }
+
+        @media (max-width: 420px) {
+            .gallery-header h2 { font-size: 28px; }
+            .gallery-header p { font-size: 14px; }
+
+            .profile-pic-placeholder { width: 100px; height: 100px; }
+            .left-column, .right-column { padding: 16px; }
+            .tag { padding: 4px 8px; font-size: 11px; }
+        }
     </style>
 </head>
 <body>
@@ -755,52 +801,72 @@
 
             <!-- Videos -->
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.43.32_8a1b9cb8.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.43.32_8a1b9cb8.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.43.32_8a1b9cb8.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.43.42_6afb295a.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.43.42_6afb295a.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.43.42_6afb295a.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.27_9aac766f.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.27_9aac766f.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.27_9aac766f.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.27_acb3e1f8.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.27_acb3e1f8.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.27_acb3e1f8.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_1112c976.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_1112c976.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_1112c976.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_c1fdc797.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_c1fdc797.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_c1fdc797.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_dcb44d99.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_dcb44d99.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_dcb44d99.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_fb84147d.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_fb84147d.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.28_fb84147d.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.29_764a5744.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.29_764a5744.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.29_764a5744.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
 
             <div class="gallery-item" data-src="Gallery/WhatsApp Video 2025-11-11 at 09.44.29_eebb1ded.mp4" onclick="openLightbox(this)">
-                <video class="gallery-media"><source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.29_eebb1ded.mp4" type="video/mp4"></video>
+                <video class="gallery-media" muted autoplay loop playsinline>
+                    <source src="Gallery/WhatsApp Video 2025-11-11 at 09.44.29_eebb1ded.mp4" type="video/mp4">
+                </video>
                 <div class="gallery-overlay"><span class="gallery-icon">🎥</span></div>
             </div>
         </div>
@@ -851,14 +917,33 @@
             const mediaPath = item.getAttribute('data-src');
             const container = document.getElementById('modalMediaContainer');
             
-            let mediaHTML = '';
+            // Clear previous media
+            container.innerHTML = '';
+
             if (mediaPath.endsWith('.mp4')) {
-                mediaHTML = `<video class="modal-media" controls autoplay><source src="${mediaPath}" type="video/mp4"></video>`;
+                // For modal we provide controls and do NOT force autoplay (mobile-friendly)
+                const video = document.createElement('video');
+                video.className = 'modal-media';
+                video.controls = true;
+                video.playsInline = true;
+
+                const src = document.createElement('source');
+                src.src = mediaPath;
+                src.type = 'video/mp4';
+                video.appendChild(src);
+
+                container.appendChild(video);
+                // Attempt to play only if allowed by the browser/user gesture
+                // (many mobile browsers block autoplay even if attempted)
+                // video.play().catch(()=>{});
             } else {
-                mediaHTML = `<img src="${mediaPath}" alt="Gallery Media" class="modal-media">`;
+                const img = document.createElement('img');
+                img.className = 'modal-media';
+                img.src = mediaPath;
+                img.alt = 'Gallery Media';
+                container.appendChild(img);
             }
-            
-            container.innerHTML = mediaHTML;
+
             document.getElementById('currentIndex').textContent = currentMediaIndex + 1;
         }
 
